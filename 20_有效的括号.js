@@ -60,7 +60,6 @@ var isValid = function (s) {
     return stack.length ? false : true;
 };
 
-
 var start = new Date();
 console.log(isValid("))"));
 var end = new Date();
