@@ -1,19 +1,28 @@
+// /**
+//  * 贪心算法
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// var maxSubArray = function (nums) {
+//     var max = (flag = nums[0]);
+//     for (let i = 1; i < nums.length; i++) {
+//         console.log(nums[i], flag + nums[i])
+//         flag = Math.max(nums[i], flag + nums[i]);
+//         console.log(flag)
+//         max = Math.max(flag, max);
+//         console.log(max)
+//         console.log('----------------------')
+//     }
+//     return max;
+// };
+
 /**
- * 贪心算法
+ * 分治法
  * @param {number[]} nums
  * @return {number}
  */
 var maxSubArray = function (nums) {
-    var max = (flag = nums[0]);
-    for (let i = 1; i < nums.length; i++) {
-        console.log(nums[i], flag + nums[i])
-        flag = Math.max(nums[i], flag + nums[i]);
-        console.log(flag)
-        max = Math.max(flag, max);
-        console.log(max)
-        console.log('----------------------')
-    }
-    return max;
+
 };
 
 
