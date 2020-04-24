@@ -7,7 +7,7 @@ var MyLinkedList = function () {
     this.length = 0
 };
 
-var listNode = function (val) {
+var ListNode = function (val) {
     this.val = val
     this.next = null
 }
@@ -25,7 +25,7 @@ MyLinkedList.prototype.get = function (index) {
             node = node.next
             i++
         }
-        return node.val
+        return node
     } else {
         return -1
     }
@@ -38,7 +38,7 @@ MyLinkedList.prototype.get = function (index) {
  */
 MyLinkedList.prototype.addAtHead = function (val) {
     const lasthead = this.head
-    const newNode = new listNode(val)
+    const newNode = new ListNode(val)
     this.head = newNode
     this.head.next = lasthead
     if (!this.tail) {
@@ -54,7 +54,7 @@ MyLinkedList.prototype.addAtHead = function (val) {
  */
 MyLinkedList.prototype.addAtTail = function (val) {
     const lastTail = this.tail
-    const newNode = new listNode(val)
+    const newNode = new ListNode(val)
     this.tail = newNode
     if (lastTail) {
         lastTail.next = this.tail
@@ -83,7 +83,7 @@ MyLinkedList.prototype.addAtIndex = function (index, val) {
             node = node.next
             i++
         }
-        const newNode = new listNode(val)
+        const newNode = new ListNode(val)
         newNode.next = node.next
         node.next = newNode
         this.length++
