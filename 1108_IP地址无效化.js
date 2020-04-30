@@ -5,9 +5,8 @@
  * @param {string} address
  * @return {string}
  */
-var defangIPaddr = function(address) {
-    return address.replace(/\./g,'[.]');
+var defangIPaddr = function (address) {
+    return address.replace(/\./g, '[.]');
 };
 
 defangIPaddr("192.168.1.1");
-
