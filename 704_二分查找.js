@@ -19,7 +19,6 @@ var search = function (nums, target) {
     return -1;
 };
 
-var start = new Date();
+console.time('冒泡排序用时');
 console.log(search([-1, 0, 3, 5, 9, 12], 9));
-var end = new Date();
-console.log(end - start + " ms");
+console.timeEnd('冒泡排序用时');
