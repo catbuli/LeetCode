@@ -13,25 +13,24 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function (root) {
-    if (!root) return [];
-    var list = [];
-    var queue = [root];
-    var level = 0;
-    while (queue.length) {
-        list.push([]);
-        var length = queue.length;
-        while (length--) {
-            var flag = queue.shift();
-            list[level].push(flag.val)
-            flag.left && queue.push(flag.left);
-            flag.right && queue.push(flag.right);
-        }
-        level++;
-    }
-    return list;
+var levelOrder = function(root) {
+	if (!root) return [];
+	var list = [];
+	var queue = [ root ];
+	var level = 0;
+	while (queue.length) {
+		list.push([]);
+		var length = queue.length;
+		while (length--) {
+			var flag = queue.shift();
+			list[level].push(flag.val);
+			flag.left && queue.push(flag.left);
+			flag.right && queue.push(flag.right);
+		}
+		level++;
+	}
+	return list;
 };
-
 
 console.time('程序用时');
 console.log(levelOrder(list));

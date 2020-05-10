@@ -19,7 +19,7 @@ var levelOrder = function (root) {
         var length = queue.length;
         while (length--) {
             var flag = queue.shift();
-            list[level].push(flag.val)
+            list[level].push(flag.val);
             for (let i = 0; i < flag.children.length; i++) {
                 queue.push(flag.children[i]);
             }
@@ -28,7 +28,6 @@ var levelOrder = function (root) {
     }
     return list;
 };
-
 
 console.time('程序用时');
 console.log(levelOrder(list));
