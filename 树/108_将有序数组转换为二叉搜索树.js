@@ -8,7 +8,15 @@ function TreeNode(val) {
  * @return {TreeNode}
  */
 var sortedArrayToBST = function (nums) {
-
+    var build = function (list, l, r) {
+        if (l > r) return null;
+        var mid = l + ((r - l) >> 1);
+        var node = new TreeNode(list[mid]);
+        node.left = build(nums, l, mid - 1)
+        node.right = build(nums, mid + 1, r)
+        return node;
+    }
+    return build(nums, 0, nums.length - 1);
 };
 
 console.time('程序用时');
