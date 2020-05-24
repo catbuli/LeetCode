@@ -1,12 +1,11 @@
 // Definition for a binary tree node.
 function TreeNode(val) {
-    this.val = val;
-    this.left = this.right = null;
+	this.val = val;
+	this.left = this.right = null;
 }
 
 var node = new TreeNode(1);
 node.left = new TreeNode(2);
-
 
 // /**
 //  * @param {TreeNode} root
@@ -23,21 +22,22 @@ node.left = new TreeNode(2);
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function (root) {
-    if (!root) return [];
-    var queue = [root];
-    var level = 1;
-    while (queue.length) {
-        var length = queue.length;
-        while (length--) {
-            var flag = queue.shift();
-            if (!flag.left && !flag.right) return level;
-            flag.left && queue.push(flag.left);
-            flag.right && queue.push(flag.right);
-        }
-        level++;
-    }
-    return level;
+var levelOrder = function(root) {
+	if (!root) return [];
+	var queue = [ root ];
+	var level = 1;
+	while (queue.length) {
+		var length = queue.length;
+		while (length--) {
+			var flag = queue.shift();
+			if (!flag.left && !flag.right) return level;
+			flag.left && queue.push(flag.left);
+			flag.right && queue.push(flag.right);
+		}
+		level++;
+	}
+
+	return level;
 };
 
 console.time('程序用时');
