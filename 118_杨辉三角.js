@@ -9,7 +9,7 @@ var generate = function (numRows) {
     ]
     for (let i = 1; i < numRows; i++) {
         list.push([]);
-        for (let j = 0; j < list[i - 1].length + 1; j++) {
+        for (let j = 0; j < i + 1; j++) {
             list[i].push((list[i - 1][j - 1] ? list[i - 1][j - 1] : 0) + (list[i - 1][j] ? list[i - 1][j] : 0))
         }
     }
