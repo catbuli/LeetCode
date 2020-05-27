@@ -20,7 +20,7 @@
 var maxProfit = function (prices) {
     var min = Number.MAX_SAFE_INTEGER;
     var flag = 0;
-    for (let i = 0; i < prices.length - 1; i++) {
+    for (let i = 0; i < prices.length; i++) {
         if (prices[i] < min) {
             min = prices[i]
         } else {
@@ -32,5 +32,5 @@ var maxProfit = function (prices) {
 
 
 console.time('程序用时');
-console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+console.log(maxProfit([7, 1, 5, 3, 6, 4, 5, 8, 7, 5, 1, 7, 4, 6, 9]));
 console.timeEnd('程序用时');
