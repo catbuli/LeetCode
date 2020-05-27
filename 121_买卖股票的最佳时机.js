@@ -13,6 +13,24 @@
 // };
 
 
+// /**
+//  * @param {number[]} prices
+//  * @return {number}
+//  */
+// var maxProfit = function (prices) {
+//     var min = Number.MAX_SAFE_INTEGER;
+//     var flag = 0;
+//     for (let i = 0; i < prices.length; i++) {
+//         if (prices[i] < min) {
+//             min = prices[i]
+//         } else {
+//             flag = Math.max(prices[i] - min, flag);
+//         }
+//     }
+//     return flag;
+// };
+
+
 /**
  * @param {number[]} prices
  * @return {number}
@@ -31,6 +49,8 @@ var maxProfit = function (prices) {
 };
 
 
+
+
 console.time('程序用时');
-console.log(maxProfit([7, 1, 5, 3, 6, 4, 5, 8, 7, 5, 1, 7, 4, 6, 9]));
+console.log(maxProfit([7, 1, 5, 3, 6, 4, 5]));
 console.timeEnd('程序用时');
