@@ -15,7 +15,7 @@ var merge = function (nums1, m, nums2, n) {
     nums1.splice(0, l2 + 1, ...nums2.slice(0, l2 + 1));
 };
 
-console.time('冒泡排序用时');
+console.time('程序用时');
 console.log(merge([4, 0, 0, 0, 0, 0], 1, [1, 2, 3, 5, 6], 5));
 
-console.timeEnd('冒泡排序用时');
+console.timeEnd('程序用时');
