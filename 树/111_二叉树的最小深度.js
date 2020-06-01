@@ -23,6 +23,7 @@ node.left = new TreeNode(2);
  * @return {number[][]}
  */
 var levelOrder = function(root) {
+    
 	if (!root) return [];
 	var queue = [ root ];
 	var level = 1;
