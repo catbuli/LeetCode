@@ -11,6 +11,8 @@ var rob = function (nums) {
 };
 
 
+
+
 console.time('程序用时');
 console.log(rob([1, 2, 3, 1]));
 console.timeEnd('程序用时');
